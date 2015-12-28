@@ -317,7 +317,7 @@ if(!window.console) { var console = { log: function() { } } };
 		}, 
 		validationHandler:function(el) { 
 			var tag = el[0].tagName,
-			type = el[0].type,
+			type = el.attr('type') || el.prop('type'),
 			name = el.attr('name'), 
 			response = {parent:el.parent()},
 			group_name = el.data('group'),
@@ -592,9 +592,10 @@ if(!window.console) { var console = { log: function() { } } };
 		},
 		validateElement:function(el) {
 			var tag = el[0].tagName,
-			type = el[0].type,
 			name = el.attr('name'),
+			type = el.attr('type') || el.prop('type'),
 			pattern = el.data('pattern');
+
 			
 			/* getting input type */
 			switch(tag) { 
