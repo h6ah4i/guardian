@@ -74,7 +74,7 @@ if(!window.console) { var console = { log: function() { } } };
 			/*** Creating objects ***/
 			$this.$inputs = {}; 
 			$this.$groups = {}; 
-			$this.customInputs = []; 							
+			$this.$customInputs = []; 							
 										
 			/*** Retrieving Group information ***/ 
 			var groups = $('*[data-group-name]', form);
